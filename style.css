@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+    color: #333;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 20px;
+}
+
+#grid-container {
+    overflow: hidden;
+    margin: 40px auto;
+    padding: 20px;
+    display: inline-block;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    position: relative;
+}
+
+#grid {
+    display: inline-block;
+    transform: scale(1);
+    transform-origin: 0 0;
+    transition: transform 0.2s ease;
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+}
+
+.pixel {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.pixel:hover {
+    opacity: 0.85;
+}
+
+#zoom-controls {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    background-color: #5a67d8;
+    color: white;
+}
+
+button:hover {
+    background-color: #434190;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.5);
+}
+
+#error-message {
+    color: #e53e3e;
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.pixel {
+    border: 1px solid transparent;
+}
+
+#grid.zoomed .pixel {
+    border: 1px solid #ddd;
+}
+
+.preview {
+    opacity: 0.75;
+    border: 2px dashed #5a67d8;
+    transition: background-color 0.3s ease;
+}
+
+#colorPicker {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+}
+
+#colorPicker:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#colorPicker:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.5);
+}
